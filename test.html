@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Focus and Blur Event Test</title>
+</head>
+<body>
+  <h1>Focus and Blur Event Test</h1>
+  <p>Open the console to see the focus and blur events.</p>
+
+  <script>
+    window.addEventListener('focus', () => {
+      console.log('Window has gained focus.');
+    });
+
+    window.addEventListener('blur', () => {
+      console.log('Window has lost focus.');
+    });
+  </script>
+</body>
+</html>
