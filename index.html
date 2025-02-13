@@ -2,17 +2,31 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Focus and Blur Event Test</title>
+  <title>Focus, Blur, and Visibility API Test</title>
 </head>
 <body>
-  <h1>Focus and Blur Event Test</h1>
-  <p>Open the console to see the focus and blur events.</p>
+  <h1>Focus, Blur, and Visibility API Test</h1>
+  <p>Open the console to see the events in action.</p>
 
   <script>
+    // Function to handle visibility change
+    function handleVisibilityChange() {
+      if (document.hidden) {
+        console.log('Document is hidden.');
+      } else {
+        console.log('Document is visible.');
+      }
+    }
+
+    // Event listener for visibility change
+    document.addEventListener('visibilitychange', handleVisibilityChange);
+
+    // Event listener for window focus
     window.addEventListener('focus', () => {
       console.log('Window has gained focus.');
     });
 
+    // Event listener for window blur
     window.addEventListener('blur', () => {
       console.log('Window has lost focus.');
     });
